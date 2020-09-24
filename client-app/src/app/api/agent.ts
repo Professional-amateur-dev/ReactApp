@@ -1,14 +1,13 @@
-import axios, { AxiosResponse } from "axios";
-import { IActivity } from "../models/activity";
+import axios, { AxiosResponse } from 'axios';
+import { IActivity } from '../models/activity';
 
-axios.defaults.baseURL = "http://localhost:5000/api";
+axios.defaults.baseURL = 'http://localhost:5000/api';
 
 const responseBody = (response: AxiosResponse) => response.data;
 
 const sleep = (ms: number) => (response: AxiosResponse) => 
     new Promise<AxiosResponse>(resolve => setTimeout(() => resolve(response), ms));
 
-    //TODO obrisat sleep
 const requests = {
     get: (url: string) => axios.get(url).then(sleep(1000)).then(responseBody),
     post: (url: string, body: {}) => axios.post(url, body).then(sleep(1000)).then(responseBody),
