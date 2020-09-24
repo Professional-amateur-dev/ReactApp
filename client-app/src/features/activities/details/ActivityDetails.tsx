@@ -1,11 +1,16 @@
-import React, { useContext } from 'react';
-import { Card, Image, Button } from 'semantic-ui-react';
-import ActivityStore from '../../../app/stores/activityStore';
-import { observer } from 'mobx-react-lite';
+import React, { useContext } from "react";
+import { Card, Image, Button } from "semantic-ui-react";
+import ActivityStore from "../../../app/stores/activityStore";
+import { observer } from "mobx-react-lite";
 
 const ActivityDetails: React.FC = () => {
   const activityStore = useContext(ActivityStore);
-  const { selectedActivity: activity, openEditForm, cancelSelectedActivity } = activityStore;
+  const {
+    selectedActivity: activity,
+    openEditForm,
+    cancelSelectedActivity,
+  } = activityStore;
+
   return (
     <Card fluid>
       <Image
@@ -25,14 +30,14 @@ const ActivityDetails: React.FC = () => {
           <Button
             onClick={() => openEditForm(activity!.id)}
             basic
-            color='blue'
-            content='Edit'
+            color="blue"
+            content="Edit"
           />
           <Button
             onClick={cancelSelectedActivity}
             basic
-            color='grey'
-            content='Cancel'
+            color="grey"
+            content="Cancel"
           />
         </Button.Group>
       </Card.Content>
