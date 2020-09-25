@@ -11,8 +11,10 @@ import ActivityDetails from "../../features/activities/details/ActivityDetails";
 const App: React.FC<RouteComponentProps> = ({ location }) => {
   return (
     <Fragment>
+      {/* ruta samo za / */}
       <Route exact path="/" component={HomePage} />
       <Route
+        /* ruta za sve ostalo, ovaj (.+) oznacava da nesto dolazi nakon / */
         path={"/(.+)"}
         render={() => (
           <Fragment>
