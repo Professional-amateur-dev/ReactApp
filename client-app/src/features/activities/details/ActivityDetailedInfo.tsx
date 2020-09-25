@@ -1,5 +1,4 @@
 import React from "react";
-import { act } from "react-dom/test-utils";
 import { Segment, Grid, Icon } from "semantic-ui-react";
 import { IActivity } from "../../../app/models/activity";
 
