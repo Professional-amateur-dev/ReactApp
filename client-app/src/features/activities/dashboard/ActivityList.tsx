@@ -10,8 +10,6 @@ const ActivityList: React.FC = () => {
   return (
     <Fragment>
       {activitiesByDate.map(([group, activities]) => {
-        console.log("activities: ", activities);
-        console.log("group: ", activities);
         return (
           <Fragment key={group}>
             <Label size="large" color="blue">

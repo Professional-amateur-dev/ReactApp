@@ -8,10 +8,13 @@ import HomePage from "../../features/home/HomePage";
 import ActivityForm from "../../features/activities/form/ActivityForm";
 import ActivityDetails from "../../features/activities/details/ActivityDetails";
 import NotFound from "./NotFound";
+import {ToastContainer} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.min.css';
 
 const App: React.FC<RouteComponentProps> = ({ location }) => {
   return (
     <Fragment>
+      <ToastContainer position='bottom-right'/>
       {/* ruta samo za / */}
       <Route exact path="/" component={HomePage} />
       <Route
