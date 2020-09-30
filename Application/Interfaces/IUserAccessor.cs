@@ -2,6 +2,6 @@ namespace Application.Interfaces
 {
     public interface IUserAccessor
     {
-         string GetCurrntUsername();
+         string GetCurrentUsername();
     }
 }
