@@ -42,7 +42,7 @@ const ActivityForm: React.FC<RouteComponentProps<DetailParams>> = ({
   match,
   history
 }) => {
-  const rootStore= useContext(RootStoreContext);
+  const rootStore = useContext(RootStoreContext);
   const {
     createActivity,
     editActivity,
