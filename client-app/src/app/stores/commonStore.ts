@@ -6,7 +6,6 @@ export default class CommonStore {
     constructor(rootStore: RootStore) {
         this.rootStore = rootStore;
 
-        //pokrece se vaki put kada napravimo setToken, sprema ga ili brise
         reaction(
             () => this.token,
             token => {
