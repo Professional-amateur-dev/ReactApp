@@ -21,8 +21,7 @@ namespace Application.User
 
         public class QueryValidator : AbstractValidator<Query>
         {
-            public QueryValidator()
-            {
+            public QueryValidator(){
                 RuleFor(x => x.Email).NotEmpty();
                 RuleFor(x => x.Password).NotEmpty();
             }
@@ -30,7 +29,6 @@ namespace Application.User
 
         public class Handler : IRequestHandler<Query, User>
         {
-
             private readonly UserManager<AppUser> _userManager;
             private readonly SignInManager<AppUser> _signInManager;
             private readonly IJwtGenerator _jwtGenerator;
