@@ -44,6 +44,8 @@ namespace Application.Photos
                 if (!user.Photos.Any(x => x.IsMain))
                     photo.IsMain = true;
 
+                user.Photos.Add(photo);
+
                 var success = await _context.SaveChangesAsync() > 0;
 
                 if (success) return photo;
